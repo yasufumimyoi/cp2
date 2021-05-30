@@ -1,0 +1,40 @@
+.movie {
+  &__ttl {
+    position: relative;
+    margin-bottom: 30px;
+
+    p {
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__video {
+    p {
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  &__box {
+    margin-bottom: 10px;
+    transition: 0.4s;
+  }
+
+  &__box:hover {
+    cursor: pointer;
+    filter: brightness(50%);
+    transition: 0.4s;
+  }
+
+  &__box:last-child {
+    margin-bottom: 0px;
+  }
+}

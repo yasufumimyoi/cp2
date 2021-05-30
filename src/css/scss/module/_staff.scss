@@ -1,0 +1,38 @@
+// .staff {
+//   &__box {
+//     text-align: center;
+//   }
+
+//   &__content {
+//     margin-bottom: 20px;
+
+//     span {
+//       font-size: 1.8em;
+//     }
+
+//     span:nth-child(odd) {
+//       margin-right: 10px;
+//     }
+//   }
+// }
+
+.staff {
+  &__inner {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  &__ttl {
+    font-size: 1rem;
+    padding-bottom: 0.5em;
+  }
+
+  &__name {
+    font-size: 3rem;
+  }
+}
+
+.-center {
+  text-align: center;
+  margin-bottom: 5em;
+}

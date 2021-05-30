@@ -1,0 +1,22 @@
+@mixin small {
+  @media only screen and (min-width: $size-s) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: $size-md) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $size-lg) {
+    @content;
+  }
+}
+
+@function sp($pxValue) {
+  $spBreakPoint: 766;
+  @return (($pxValue / $spBreakPoint) * 100) + vw;
+}

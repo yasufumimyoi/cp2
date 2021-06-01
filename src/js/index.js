@@ -62,11 +62,27 @@ $(function () {
 });
 
 $(function () {
-  $(".js-modal-open").on("click", function () {
-    $(".js-modal").fadeIn();
-    return false;
+  $(".js-modal-open").each(function () {
+    $(this).on("click", function () {
+      var target = $(this).data("target");
+      var modal = document.getElementById(target);
+      $(modal).fadeIn();
+
+      if (target == "modal01") {
+        $(
+          '<iframe class="modal_video" src="https://www.youtube.com/embed/mzks2-xkAaU?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+        ).insertAfter(".video01");
+      } else if (target == "modal02") {
+        $(
+          '<iframe class="modal_video" src="https://www.youtube.com/embed/uFduoOYXPwA?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+        ).insertAfter(".video02");
+      }
+
+      return false;
+    });
   });
   $(".js-modal-close").on("click", function () {
+    $(".modal_video").remove();
     $(".js-modal").fadeOut();
     return false;
   });
